@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="uk.ac.bham.Main">
+   <children>
+      <VBox layoutX="130.0" layoutY="24.0" prefHeight="400.0" prefWidth="600.0" style="-fx-alignment: center; -fx-background-color: #1F2833;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fill="#66fcf1" strokeType="OUTSIDE" strokeWidth="0.0" text="Information" textAlignment="CENTER">
+               <font>
+                  <Font name="Impact" size="36.0" />
+               </font>
+            </Text>
+            <TextArea editable="false" prefHeight="323.0" prefWidth="550.0" text="This tool utilises stable-matching algorithms to form pairs within a group of individuals. There are various options available in how preferences are selected by the participating members.&#10;&#10;• To input the preferences within the tool itself select 'Enter Preferences'&#10;• To create randomly generated preferences selecet 'Random Preferences'&#10;• To use the M.B.T.I comptability preference select 'M.B.T.I Implementation'&#10;&#10;Enter Preferences&#10;This algorithm can be used for groups of size 4-8, where each person must enter their own preferences for the remaining members of the group (n-1). This algorithm is developed from Irving's (1985) implementation of the Stable Roommate problem. In this paper, Irving discusses an efficient algorithm written in Pascal. This algorithm has a worst-case time complexity of O(n^2).&#10;&#10;&#10;&#10;" wrapText="true">
+               <VBox.margin>
+                  <Insets top="25.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <Hyperlink fx:id="IrvingLink" onAction="#IrvingLink_run" text="Irving (1985) An Efficient Implementation For The &quot;Stable Roommates&quot; Problem." textAlignment="CENTER" textFill="#66fcf1">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Hyperlink>
+         </children>
+         <padding>
+            <Insets bottom="25.0" left="25.0" right="25.0" top="25.0" />
+         </padding>
+      </VBox>
+   </children>
+</AnchorPane>

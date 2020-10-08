@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0B0C10 #0B0C10;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <VBox prefHeight="200.0" prefWidth="986.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#66fcf1" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Preferences" textAlignment="CENTER" wrappingWidth="478.197265625">
+               <font>
+                  <Font name="Impact" size="60.0" />
+               </font>
+            </Text>
+            <Text fill="#c5c6c7" strokeType="OUTSIDE" strokeWidth="0.0" text="First select your name by clicking on it below, then select (in preference order) the people that you might like to be matched with. Hit 'Save preferences' when you are done." textAlignment="CENTER" wrappingWidth="491.2578125">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Select your name" textFill="#66fcf1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="SelectName" style="-fx-background-color: #1F2833; -fx-spacing: 10; -fx-alignment: center;" />
+            <Label text="Select your preferred partners" textFill="#66fcf1">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <padding>
+                  <Insets top="25.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox fx:id="SelectPartners" style="-fx-background-color: #1F2833; -fx-spacing: 10; -fx-alignment: center;" />
+            <Button fx:id="SavePreferences" disable="true" mnemonicParsing="false" onAction="#savePreferencesBtnActivated" style="-fx-background-color: #0B0C10; -fx-border-color: #66fcf1; -fx-alignment: center;" text="SAVE PREFERENCES" textFill="#66fcf1">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" top="25.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="100.0" right="100.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane minHeight="480.0" minWidth="606.0" prefHeight="600.0" prefWidth="1000.0" style="-fx-background-color: #0B0C10 #0B0C10;" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="uk.ac.bham.stableroommates.CreateGroupController">
+   <top>
+      <Text fill="#66fcf1" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Group" BorderPane.alignment="TOP_CENTER">
+         <font>
+            <Font name="Impact" size="60.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets top="50.0" />
+         </BorderPane.margin>
+      </Text>
+   </top>
+   <center>
+      <VBox prefHeight="357.0" prefWidth="842.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="#66fcf1" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-alignment: center;" text="This tool will aid in create stable-matched pairs of people from a group. To get started, type a group name below and hit 'GO'." textAlignment="CENTER" wrappingWidth="649.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="25.0" right="50.0" top="-150.0" />
+               </VBox.margin>
+            </Text>
+            <VBox style="-fx-alignment: center;">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-alignment: center;">
+                     <children>
+                        <TextField fx:id="GroupNameInput" focusTraversable="false" onAction="#onEnter" prefHeight="47.0" prefWidth="410.0" promptText="Enter Group Name Here..." style="-fx-alignment: center; -fx-background-color: #1F2833 #1F2833; -fx-text-fill: #c5c6c7;">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="25.0" right="25.0" top="25.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Button fx:id="GO_Btn" alignment="CENTER" minHeight="41.0" minWidth="64.0" mnemonicParsing="false" onAction="#goBtnActivated" prefHeight="41.0" prefWidth="64.0" style="-fx-alignment: center; -fx-background-color: #1F2833 #1F2833; -fx-border-color: #66fcf1;" text="Go" textFill="#c5c6c7" wrapText="true">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets bottom="25.0" right="25.0" top="25.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </center>
+   <left>
+      <Button fx:id="BackButton" minHeight="36.0" minWidth="66.0" mnemonicParsing="false" onAction="#backButtonActivated" prefHeight="40.0" prefWidth="70.0" style="-fx-border-color: #66fcf1; -fx-background-color: #1F2833 #1F2833;" text="Back" textFill="#c5c6c7" BorderPane.alignment="TOP_LEFT">
+         <font>
+            <Font size="17.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets left="25.0" top="-100.0" />
+         </BorderPane.margin>
+      </Button>
+   </left>
+   <bottom>
+      <Label fx:id="ErrorMessage" prefHeight="34.0" prefWidth="284.0" style="-fx-alignment: center;" text="Please enter a group name" textFill="#9e1212" visible="false" BorderPane.alignment="CENTER" />
+   </bottom>
+</BorderPane>
